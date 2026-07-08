@@ -1,0 +1,40 @@
+<div class="wrap">
+  <p class="eyebrow">Daily dev bits · #001</p>
+  <h1>Why does setTimeout(0) still run last?</h1>
+  <p class="sub">JavaScript has one chef (the call stack), kitchen timers (Web APIs), and a pickup window (the callback queue). Step through the code and watch the order unfold.</p>
+
+  <div class="board">
+    <div class="panel">
+      <h2>Code</h2>
+      <div class="code">
+        <div id="l0"><span class="kw">console</span>.log(<span class="str">'A'</span>);</div>
+        <div id="l1"><span class="kw">setTimeout</span>(() =&gt; log(<span class="str">'B'</span>), <span class="num">0</span>);</div>
+        <div id="l2"><span class="kw">console</span>.log(<span class="str">'C'</span>);</div>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>Runtime</h2>
+      <div class="zones">
+        <div class="zone" id="z-stack"><span class="zone-label">Call stack</span></div>
+        <div class="zone" id="z-api"><span class="zone-label">Web APIs</span></div>
+        <div class="zone" id="z-queue"><span class="zone-label">Callback queue</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="console">
+    <h2>Console</h2>
+    <div id="out"></div>
+  </div>
+
+  <p class="narr" id="narr">Press <strong>Step</strong> to walk through one move at a time, or <strong>Auto play</strong> to watch the whole run.</p>
+
+  <div class="controls">
+    <button class="primary" id="stepBtn">Step →</button>
+    <button id="playBtn">▶ Auto play</button>
+    <button id="resetBtn">↺ Reset</button>
+  </div>
+  <p class="hint">tip: keyboard → also steps forward</p>
+
+  <footer>made with ♥ for devs · daily dev bits</footer>
+</div>

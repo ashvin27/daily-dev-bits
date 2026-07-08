@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Dev Bits — Interactive web dev concepts</title>
+<meta name="description" content="One web development concept a day, explained interactively. JavaScript, CSS, React, Node — play with the concepts, don't just read them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#14161c; --panel:#1c1f27; --line:#2e3340;
+    --text:#e8e6df; --dim:#9aa0ad; --faint:#6b7280;
+    --js:#f2b95c; --css:#8ab4f8; --react:#5ecfb0; --node:#b3a4f5;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:'Space Grotesk',system-ui,sans-serif;
+    min-height:100vh; padding:48px 20px 80px;
+    display:flex; flex-direction:column; align-items:center;
+  }
+  .wrap{width:100%; max-width:760px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--js); margin-bottom:12px;
+  }
+  h1{font-size:clamp(30px,6vw,46px); font-weight:600; line-height:1.1; margin-bottom:14px;}
+  .sub{color:var(--dim); font-size:16px; line-height:1.65; max-width:52ch; margin-bottom:40px;}
+  .sub strong{color:var(--text); font-weight:500;}
+  .list{display:flex; flex-direction:column; gap:12px;}
+  a.card{
+    display:flex; align-items:center; gap:16px;
+    background:var(--panel); border:1px solid var(--line); border-radius:12px;
+    padding:18px 20px; text-decoration:none; color:var(--text);
+    transition:border-color .15s, transform .15s;
+  }
+  a.card:hover{border-color:var(--faint); transform:translateX(4px);}
+  a.card:focus-visible{outline:2px solid var(--css); outline-offset:2px;}
+  .num{
+    font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--faint);
+    min-width:38px;
+  }
+  .card-body{flex:1;}
+  .card-title{font-size:17px; font-weight:500; margin-bottom:3px;}
+  .card-desc{font-size:13.5px; color:var(--dim); line-height:1.5;}
+  .tag{
+    font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em;
+    text-transform:uppercase; padding:5px 10px; border-radius:6px; white-space:nowrap;
+  }
+  .tag.js{color:var(--js); background:#3a2f1c;}
+  .tag.css{color:var(--css); background:#1f2c42;}
+  .tag.react{color:var(--react); background:#1c352e;}
+  .tag.node{color:var(--node); background:#2a2542;}
+  .soon{
+    border:1px dashed var(--line); border-radius:12px; padding:18px 20px;
+    color:var(--faint); font-size:14px; font-family:'IBM Plex Mono',monospace;
+  }
+  footer{margin-top:56px; color:var(--faint); font-size:12.5px; font-family:'IBM Plex Mono',monospace; text-align:center; line-height:2;}
+  footer a{color:var(--dim);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Daily dev bits</p>
+  <h1>One concept a day.<br>Play with it, don't just read it.</h1>
+  <p class="sub">Interactive, animated explainers for web developers — <strong>JavaScript, CSS, React, and Node</strong>. Built for juniors and freshers who want concepts to actually click. New episode every day.</p>
+
+  <div class="list">
+    <a class="card" href="001-event-loop/">
+      <span class="num">#001</span>
+      <span class="card-body">
+        <span class="card-title" style="display:block;">The event loop</span>
+        <span class="card-desc" style="display:block;">Why setTimeout(0) still runs last — step through the call stack, Web APIs, and callback queue.</span>
+      </span>
+      <span class="tag js">JS</span>
+    </a>
+    <div class="soon">#002 — coming tomorrow…</div>
+  </div>
+
+  <footer>
+    made with ♥ for devs · follow the series on <a href="https://www.linkedin.com/">LinkedIn</a>
+  </footer>
+</div>
+</body>
+</html>
