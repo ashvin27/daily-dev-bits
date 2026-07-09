@@ -9,6 +9,7 @@ One web development concept a day — explained **interactively**, not with stat
 | # | Topic | Stack | Play |
 |---|-------|-------|------|
 | 001 | The event loop — why `setTimeout(0)` runs last | JS | [▶ Play](https://YOUR_USERNAME.github.io/daily-dev-bits/001-event-loop/) |
+| 002 | [The Temporal Dead Zone](002-temporal-dead-zone/index.html) | JavaScript | `let`/`const` are hoisted but uninitialized — access before declaration throws | [Demo](https://<your-user>.github.io/daily-dev-bits/002-temporal-dead-zone/) · [CodePen](#) |
 
 ## How this repo works
 
